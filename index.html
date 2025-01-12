@@ -4,8 +4,7 @@
     <h1>Arranging values with HTML DOM Structure</h1>
     <p id="var_object"></p>
     <p id="array_join"></p>
-    <p id="array_pop1"></p>
-    <p id="array_pop2"></p>
+    <p id="array_pop"></p>
     <script>
         var student = {
             name: "Nataly",
@@ -13,10 +12,13 @@
             grade: 8
         };
         document.getElementById("var_object").innerHTML = "<b>OBJECT</b>" + "<br>" + "My name is " + student.name + "." + "<br>" + " I am " + student.age + " years old." + "<br>" + " I am in grade " + student.grade + ".";
+
         var fruits = ["Banana", "Orange", "Apple", "Mango"];
+
         document.getElementById("array_join").innerHTML = "<b>ARRAY_JOIN</b>" + "<br>" + fruits.join(" * ");
         fruits.pop();
-        document.getElementById("array_pop2").innerHTML = "<b>ARRAY_POP</b>" + "<br>" + fruits;
+
+        document.getElementById("array_pop").innerHTML = "<b>ARRAY_POP</b>" + "<br>" + fruits;
     </script>
 </body>
 </html>
