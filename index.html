@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <body>
     <h1>Arranging values with HTML DOM Structure</h1>
-    <p id="var_object"></p>
-    <p id="array_join"></p>
-    <p id="array_pop"></p>
+    <p id="var_object"></p> <!-- This will display the student object -->
+    <p id="array_join"></p> <!-- This will display the joined array -->
+    <p id="array_pop"></p> <!-- This will display the array after pop -->
+
     <script>
+        // Define the student object
         var student = {
             name: "Nataly",
             age: 13,
             grade: 8
         };
-        document.getElementById("var_object").innerHTML = "<b>OBJECT</b>" + "<br>" + "My name is " + student.name + "." + "<br>" + " I am " + student.age + " years old." + "<br>" + " I am in grade " + student.grade + ".";
 
+        // Use the DOM to display object data
+        document.getElementById("var_object").innerHTML = "<b>OBJECT</b>" + "<br>" +
+            "My name is " + student.name + "." + "<br>" +
+            " I am " + student.age + " years old." + "<br>" +
+            " I am in grade " + student.grade + ".";
+
+        // Define an array of fruits
         var fruits = ["Banana", "Orange", "Apple", "Mango"];
 
+        // Use the DOM to join the array and display it
         document.getElementById("array_join").innerHTML = "<b>ARRAY_JOIN</b>" + "<br>" + fruits.join(" * ");
+
+        // Remove the last item from the array using pop
         fruits.pop();
 
+        // Use the DOM to display the array after the pop operation
         document.getElementById("array_pop").innerHTML = "<b>ARRAY_POP</b>" + "<br>" + fruits;
     </script>
 </body>
+
 </html>
